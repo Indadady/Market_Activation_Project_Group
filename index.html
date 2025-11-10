@@ -30,14 +30,41 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+        /* New style for the analysis table */
+        .analysis-table th {
+            background-color: #e5e7eb;
+            color: #1f2937;
+            padding: 12px;
+            text-align: center;
+            font-weight: 700;
+            border-bottom: 2px solid #d1d5db;
+        }
+        .analysis-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f3f4f6;
+            vertical-align: top;
+            text-align: left;
+        }
+        .analysis-table tr:nth-child(odd) {
+            background-color: #f9fafb;
+        }
     </style>
 </head>
 <body class="min-h-screen p-4 md:p-8">
 
     <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
         
-        <!-- Header & Logo -->
-        <header class="p-6 md:p-8 bg-blue-700 text-white flex justify-between items-center rounded-t-xl">
+        <!-- New: Logo Bar (Separated from Header, Centered) -->
+        <div class="p-4 bg-white border-b border-gray-200 flex justify-center items-center rounded-t-xl">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s16000/logo.png" 
+                 alt="투어메이커 로고" 
+                 class="h-10 w-auto"
+                 onerror="this.onerror=null;this.src='https://placehold.co/100x40/000/FFF?text=TOURMAKER';"
+            >
+        </div>
+
+        <!-- Header (Title Only - No Logo inside) -->
+        <header class="p-6 md:p-8 bg-blue-700 text-white rounded-b-none">
             <div class="space-y-2">
                 <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">
                     제주 전통시장 활성화 벤치마킹
@@ -46,12 +73,6 @@
                     정선시장활성화사업단 워크숍 (2박 3일)
                 </p>
             </div>
-            <!-- 투어메이커 로고 - 사용자 제공 최신 URL로 수정 -->
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s16000/logo.png" 
-                 alt="투어메이커 로고" 
-                 class="h-16 w-auto rounded-lg shadow-lg bg-white p-1 ml-4"
-                 onerror="this.onerror=null;this.src='https://placehold.co/100x64/000/FFF?text=Tour+Maker';"
-            >
         </header>
 
         <!-- Trip Overview -->
@@ -130,7 +151,7 @@
                 <i class="fas fa-map-marked-alt text-red-600 mr-2"></i> 제주 워크숍 동선 지도
             </h2>
             <!-- 제주도 지도 이미지 주소 반영 -->
-            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEja29H2bkdb6Owu92LROMnIVoFq7jNDBXqaSVz7QCrPEK_6NFWQgqwBNZFMiI2Oc83rbNMLIdSgbI3wQqNgYHuQILSAeVHTyVVo43zr3TXWgB3VXMWaECHirMIFfUEwMD7oecyHKCIHTHGq08niRH9CWO363dRMcm1NjHoFJuoisKklnaguPlba6e_Ooo0=s16000" 
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEja29H2bkdb6Owu92LROMnIVoFq7jNDBXqaSVz7QCrPEK_6NFWQgqwBNZFMiI2Oc83rbNMLIdSgbI3wQqNgYHuQILSAeVHTyVVo43zr3TXWgB3VXMWaECHirMIFfUEwMD7oecyHKCIHTHGq08niRH9CWO363dRMcm1NjHoHJuoisKklnaguPlba6e_Ooo0=s16000" 
                  alt="제주도 워크숍 동선 지도" 
                  class="w-full h-auto rounded-lg market-img"
                  onerror="this.onerror=null;this.src='https://placehold.co/800x400/CCCCCC/333333?text=제주도+지도+Placeholder';"
@@ -375,13 +396,45 @@
             <!-- 2. Benchmarking Focus Report Placeholder -->
             <div>
                 <h2 class="text-2xl font-bold text-gray-700 mb-6 border-b pb-2 flex items-center">
-                    <i class="fas fa-lightbulb text-orange-600 mr-2"></i> 시장 활성화 벤치마킹 포커스 (추가 분석 내용)
+                    <i class="fas fa-lightbulb text-orange-600 mr-2"></i> 시장 활성화 벤치마킹 포커스 및 적용 제안
                 </h2>
-                <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-orange-500">
-                    <p class="text-gray-600 italic">
-                        정선시장 활성화를 위한 인사이트 및 주요 관찰 내용은 이 공간에 업데이트 될 예정입니다. (예: 제주 동문시장 야시장 운영 노하우 분석, 서문공설시장의 특성화 전략 등)
-                    </p>
+                <div class="overflow-x-auto rounded-lg border border-gray-200 shadow-md">
+                    <table class="analysis-table w-full text-sm text-left text-gray-600">
+                        <thead class="text-xs uppercase text-gray-800 bg-gray-100">
+                            <tr>
+                                <th scope="col" class="min-w-[100px] text-center">시장 탐방지</th>
+                                <th scope="col" class="min-w-[200px] text-center">주요 벤치마킹 포인트 (Insight)</th>
+                                <th scope="col" class="min-w-[200px] text-center">정선 시장 적용 제안 (Action)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold text-red-600 text-center">동문재래시장</td>
+                                <td>야시장 운영 노하우 (유동 인구 유입, 특화 상품 개발, 청년 창업 부스 연계)</td>
+                                <td>정선 5일장 야간 프로그램 활성화 방안, 메뉴 표준화 및 브랜드화 전략 모색</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-red-600 text-center">제주민속오일장</td>
+                                <td>대규모 오일장의 운영 관리 (주차/교통 통제, 임시 시설물 설치/철거, 노점 배치 최적화)</td>
+                                <td>정선 5일장 운영 효율화 및 관광객 유입 시 체계적인 교통/인프라 관리 방안</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-red-600 text-center">서문공설시장</td>
+                                <td>상인 조직화 및 서비스 현대화 (배송 시스템, 온라인 연계, 특성화 점포 육성)</td>
+                                <td>정선 시장 상인 교육 연계 및 모바일 결제 시스템 도입을 위한 기술 검토</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-red-600 text-center">수목원 야시장</td>
+                                <td>테마형/체험형 시장 (문화 공연 결합, 관광지 연계 시너지 효과)</td>
+                                <td>정선 지역 관광 명소와 연계한 **팝업 마켓** 또는 이벤트 존 구축 아이디어 발굴</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <!-- 최종 결과보고서 관련 문구 삭제 -->
+                <p class="text-sm text-gray-500 mt-3 text-center">
+                    <i class="fas fa-chart-line mr-1"></i> 본 분석 테이블은 워크숍 기간 중점적으로 관찰하고 논의할 핵심 의제입니다.
+                </p>
             </div>
         </section>
 
